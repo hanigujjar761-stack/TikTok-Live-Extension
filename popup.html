@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 350px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    h2 {
+      margin: 0 0 15px 0;
+      text-align: center;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: all 0.3s;
+    }
+    #saveBtn {
+      background: #4CAF50;
+      color: white;
+    }
+    #saveBtn:hover {
+      background: #45a049;
+    }
+    #toggleBtn {
+      background: #ff6b6b;
+      color: white;
+    }
+    #toggleBtn.active {
+      background: #51cf66;
+    }
+    #status {
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.2);
+      margin-bottom: 10px;
+    }
+    .info {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎥 TikTok Live Auto Return</h2>
+  
+  <div id="status">Status: <span id="statusText">Band hai</span></div>
+  
+  <div class="input-group">
+    <label for="liveUrl">Live Stream Link:</label>
+    <input type="text" id="liveUrl" placeholder="https://www.tiktok.com/@username/live">
+  </div>
+  
+  <button id="saveBtn">💾 Link Save Karein</button>
+  <button id="toggleBtn">🔴 Extension Chalu Karein</button>
+  
+  <div class="info">
+    ⚠️ Pehle live link save karein, phir extension chalu karein
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
