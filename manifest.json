@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "TikTok Live Auto Return",
+  "version": "1.0",
+  "description": "Automatically return to your favorite TikTok live stream",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.tiktok.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.tiktok.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
